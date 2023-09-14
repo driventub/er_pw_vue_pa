@@ -61,8 +61,11 @@ export default {
        this.profesores = await buscarTodosProfesorFachada();
     },
 
+    // como llega un array de links, le separo para el href
     enviar(link) {
-      this.$emit("apiLink", link);
+
+      const [raiz] = link
+      this.$emit("apiLink", raiz.href);
     },
     async eliminar(id) {
       await borrarProfesorFachada(id);

@@ -48,7 +48,13 @@
 <script>
 export default {
     props:{
-        buscar: null,
+        // error de que le llega nulo el prop
+        buscar: {
+            nombre: "",
+            apellido: "",
+            fechaNacimiento: "", 
+            cedula: ""
+        },
     },
    
 

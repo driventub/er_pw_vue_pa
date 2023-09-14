@@ -9,10 +9,7 @@ const routes = [
     path: "/mostrar",
     component: () => import("../pages/MostrarPage.vue"),
   },
-  // {
-  //   path: "/",
-  //   component: () => import(".../components/Bienvenida.vue"),
-  // },
+
   
 ];
 
