@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="buscar">
     <div class="mb-3">
       <label for="" class="form-label">Nombre</label>
       <input
@@ -50,11 +50,9 @@ export default {
     props:{
         // error de que le llega nulo el prop
         buscar: {
-            nombre: "",
-            apellido: "",
-            fechaNacimiento: "", 
-            cedula: ""
-        },
+            type: Object,
+            default: null
+        }
     },
    
 

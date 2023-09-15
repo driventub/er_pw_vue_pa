@@ -44,6 +44,7 @@
 </template>
 
 <script>
+import axios from "axios";
 import {
   borrarProfesorFachada,
   buscarTodosProfesorFachada,
@@ -62,10 +63,12 @@ export default {
     },
 
     // como llega un array de links, le separo para el href
-    enviar(link) {
+    async enviar(link) {
 
       const [raiz] = link
-      this.$emit("apiLink", raiz.href);
+      const ref = await axios.get(raiz.href).then(r=> r.data)
+      console.log(ref);
+      this.$emit("apiLink", ref);
     },
     async eliminar(id) {
       await borrarProfesorFachada(id);

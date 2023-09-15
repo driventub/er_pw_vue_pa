@@ -5,7 +5,7 @@
         <div class="card">
           <div class="card-body">
             <h1 class="card-title text-center"></h1>
-            <MostrarProfesor @apilink="enviarProfesor"/>
+            <MostrarProfesor @apiLink="enviarProfesor"/>
           </div>
         </div>
       </div>
